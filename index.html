@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Memória játék</title>
+    <meta name="description" content="">
+    <link rel="stylesheet prefetch" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+
+    <div class="container">
+<!--
+        <header>
+            <h1><img alt="Praktiker" id="logo" src="img/praktiker_logo_hucolors.svg"><br>Memória játék</h1>
+        </header>
+-->
+        <section class="score-panel">
+            <span id="movesText">Lépésszám: <span class="moves" id="moves">0</span></span>
+<!--
+            <div class="star-rating">
+        	  <ul class="stars">
+        		  <li><i class="fa fa-star" id="starThree"></i></li>
+        		  <li><i class="fa fa-star" id="starTwo"></i></li>
+        		  <li><i class="fa fa-star" id="starOne"></i></li>
+          	</ul>
+            </div>
+          -->
+          <div id="timer"><span id="timer-text">Idő: </span>
+            <label class="minutes">00</label>:<label class="seconds">00</label></div>
+          <div class="restart" id="restart">
+        		<i class="fa fa-repeat"> </i><span id="restart-text"> Újrakezdés</span>
+        	</div>
+        </section>
+
+        <ul class="deck">
+        </ul>
+    </div>
+
+    <!-- Winner Popup source: www.w3schools.com -->
+    <div id="win-popup" class="popup zoomIn">
+
+      <!-- Popup content -->
+      <div class="popup-content">
+        <span class="close">&times;</span>
+        <img alt="SmarTTable" id="winlogo" src="img/smarttable-logo-black-cyan.png">
+        <h2>Gratulálunk!</h2>
+        <span class="win-seconds">0</span> másodperc alatt <span id="total-moves">0</span> lépésből teljesítetted a játékot.
+        <table id="toplist-table">
+          <tr>
+            <th>Helyezés</th>
+            <th>Név</th> 
+            <th>Pontszám</th>
+          </tr>
+        </table>
+        <button type="button" class="button" id="play-again-btn">Új játék!</button>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+</body>
+</html>
